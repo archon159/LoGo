@@ -18,14 +18,14 @@ def get_dataset(dataset, data_dir=Path('./data'), base_model_name='Llama-3.1-8B'
     test_data_path = data_dir / main / sub / 'test.jsonl'
         
     train_samples = []
-    
-    if train_data_path:
+
+    if train_data_path.exists():
         with open(train_data_path, 'r') as f:
             for line in f:
                 train_samples.append(json.loads(line))
 
     test_samples = []
-    if test_data_path:
+    if test_data_path.exists():
         with open(test_data_path, 'r') as f:
             for line in f:
                 test_samples.append(json.loads(line))

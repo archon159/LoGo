@@ -109,20 +109,20 @@ if __name__ == "__main__":
         
         print(target_dir)
         
-        with open(target_dir / f'eval_results.json', 'w') as f:
+        with open(target_dir / 'eval_results.json', 'w') as f:
             json.dump(eval_results, f)
 
-        with open(target_dir / f'predictions.json', 'w') as f:
+        with open(target_dir / 'predictions.json', 'w') as f:
             json.dump(predictions, f)
-            
-        with open(target_dir / f'selected_loras.json', 'w') as f:
+
+        with open(target_dir / 'selected_loras.json', 'w') as f:
             json.dump(selected_lora_names, f)
-            
-        with open(target_dir / f'weights.json', 'w') as f:
+
+        with open(target_dir / 'weights.json', 'w') as f:
             json.dump(weights, f)
 
-        with open(target_dir / f'metric_dict.json', 'w') as f:
+        with open(target_dir / 'metric_dict.json', 'w') as f:
             json.dump(metric_dict, f)
-        
-        with open(target_dir / f'time_dict.json', 'w') as f:
+
+        with open(target_dir / 'time_dict.json', 'w') as f:
             json.dump(time_dict, f)

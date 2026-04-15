@@ -12,8 +12,6 @@ import torch.nn.functional as F
 
 from peft import PeftMixedModel
 from peft.tuners.lora.layer import LoraLayer
-from peft.utils.save_and_load import set_peft_model_state_dict
-from peft.helpers import rescale_adapter_scale
 from transformers import AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoTokenizer, GenerationConfig
 from transformers import StoppingCriteria, StoppingCriteriaList
 
@@ -52,8 +50,7 @@ TARGET_BLOCK = {
 
 def entropy(x: torch.Tensor, dim: int = -1, eps: float = 1e-8):
     probs = torch.softmax(x, dim=dim)
-    entropy = - (probs * torch.log(probs + eps)).sum(dim=dim)
-    return entropy
+    return - (probs * torch.log(probs + eps)).sum(dim=dim)
 
 def get_base_model(
     base_model_name="Llama-3.1-8B",
@@ -219,8 +216,8 @@ def eval_single(
         }
         
     else:
-        assert(0)
-    
+        raise ValueError(f"Unknown eval method: {eval_method}")
+
     return ret
 
 class StopOnNewline(StoppingCriteria):
@@ -307,7 +304,7 @@ def select_and_predict(
             elif selection_strategy == 'entropy':
                 metric_result = 1 / (entropy(last_token_proj, dim=-1) + 1e-6) # (N, K)
             else:
-                assert(0)
+                raise ValueError(f"Unknown selection strategy: {selection_strategy}")
 
             metric_dict[selection_strategy].append(metric_result)
             top_metric, top_indices = torch.topk(metric_result, k=n_selected_modules, dim=-1) # (N, S), (N, S)
