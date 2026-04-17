@@ -86,13 +86,15 @@ python3 main.py --dataset bbh.boolean_expressions --base_model Llama-3.1-8B --gp
 | `--seed` | `0` | Random seed for reproducibility |
 | `--generation_early_stop` | `False` | Stop generation at the first newline. Enable this for faster generation. |
 
-**Expected output:**
+## Results
+
+### Expected Output
 ```
 Accuracy: 71.33
 results/Llama-3.1-8B_selection_norm_n_20_seed_0/bbh.boolean_expressions
 ```
 
-## Results
+### Output Files
 
 Results are saved to `results/{base_model}_selection_{strategy}_n_{n_modules}_seed_{seed}/{dataset}/`:
 
