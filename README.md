@@ -75,12 +75,6 @@ python3 main.py --dataset <DATASET> --base_model <BASE_MODEL> --gpu <GPU>
 python3 main.py --dataset bbh.boolean_expressions --base_model Llama-3.1-8B --gpu 0
 ```
 
-**Expected output:**
-```
-Accuracy: 71.33
-results/Llama-3.1-8B_selection_norm_n_20_seed_0/bbh.boolean_expressions
-```
-
 ## Arguments
 
 | Argument | Default | Description |
@@ -91,6 +85,12 @@ results/Llama-3.1-8B_selection_norm_n_20_seed_0/bbh.boolean_expressions
 | `--n_selected_modules` | `20` | Number of LoRA adapters to select per instance |
 | `--seed` | `0` | Random seed for reproducibility |
 | `--generation_early_stop` | `False` | Stop generation at the first newline. Enable this for faster generation. |
+
+**Expected output:**
+```
+Accuracy: 71.33
+results/Llama-3.1-8B_selection_norm_n_20_seed_0/bbh.boolean_expressions
+```
 
 ## Results
 
