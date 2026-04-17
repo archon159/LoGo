@@ -112,7 +112,7 @@ If you use this work, please cite:
 ```bibtex
 @article{lee2025lora,
   title={LoRA on the Go: Instance-level Dynamic LoRA Selection and Merging},
-  author={Lee, Seungeon and Das, Soumi and Gupta, Manish and Gummadi, Krishna P},
+  author={Lee, Seungeon and Das, Soumi and Gupta, Manish and Gummadi, Krishna P.},
   journal={arXiv preprint arXiv:2511.07129},
   year={2025}
 }

@@ -12,7 +12,7 @@ authors:
     given-names: Manish
     affiliation: Microsoft, Hyderabad
   - family-names: Gummadi
-    given-names: Krishna P
+    given-names: Krishna P.
     affiliation: MPI-SWS
 preferred-citation:
   type: article
@@ -28,7 +28,7 @@ preferred-citation:
       given-names: Manish
       affiliation: Microsoft, Hyderabad
     - family-names: Gummadi
-      given-names: Krishna P
+      given-names: Krishna P.
       affiliation: MPI-SWS
   journal: "arXiv preprint arXiv:2511.07129"
   year: 2025
