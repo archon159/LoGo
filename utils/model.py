@@ -34,7 +34,7 @@ EVAL_METHOD_DICT = {
 }
 
 TARGET_BLOCK = {
-    'Qwen2.5_7b': {
+    'Qwen2.5-7B': {
         'layer_idx': 27,
         'proj': 'q',
     },

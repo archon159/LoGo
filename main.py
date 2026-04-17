@@ -1,6 +1,15 @@
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+# Set HF_HOME to a writable directory with sufficient disk space if not already set.
+# Example: export HF_HOME=/path/to/large/storage/.cache/huggingface
+if "HF_HOME" not in os.environ:
+    print("[Warning] HF_HOME is not set. Models will be cached in the default ~/.cache/huggingface directory.")
+    print("[Warning] If you face disk quota issues, set HF_HOME to a larger storage path before running.")
+
+# To access gated models (e.g. Llama), log in via: huggingface-cli login
+# Or set the HF_TOKEN environment variable: export HF_TOKEN=<your_token>
+
 import time
 from pathlib import Path
 import numpy as np

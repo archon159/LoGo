@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "LoRA on the Go: Instance-level Dynamic LoRA Selection and Merging"
+authors:
+  - family-names: Lee
+    given-names: Seungeon
+    affiliation: MPI-SWS
+  - family-names: Das
+    given-names: Soumi
+    affiliation: MPI-SWS
+  - family-names: Gupta
+    given-names: Manish
+    affiliation: Microsoft, Hyderabad
+  - family-names: Gummadi
+    given-names: Krishna P
+    affiliation: MPI-SWS
+preferred-citation:
+  type: article
+  title: "LoRA on the Go: Instance-level Dynamic LoRA Selection and Merging"
+  authors:
+    - family-names: Lee
+      given-names: Seungeon
+      affiliation: MPI-SWS
+    - family-names: Das
+      given-names: Soumi
+      affiliation: MPI-SWS
+    - family-names: Gupta
+      given-names: Manish
+      affiliation: Microsoft, Hyderabad
+    - family-names: Gummadi
+      given-names: Krishna P
+      affiliation: MPI-SWS
+  journal: "arXiv preprint arXiv:2511.07129"
+  year: 2025
+  url: "https://arxiv.org/abs/2511.07129"

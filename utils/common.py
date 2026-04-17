@@ -38,6 +38,7 @@ def parse_arguments(
     )
     parser.add_argument(
         '--base_model', type=str, default='Llama-3.1-8B',
+        choices=['Llama-3.1-8B', 'Qwen2.5-7B', 'deepseek-llm-7b-base'],
         help='The name of base model'
     )
     parser.add_argument(
